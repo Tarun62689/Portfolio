@@ -4,7 +4,7 @@ export const projects = [
     title: "Path2Placement – Placement Prediction & Insights Platform",
     description: "A data-driven platform that provides placement predictions, analytics dashboards, and insights for students using machine learning and modern web technologies.",
     tags: ["React", "Node.js", "Express", "Supabase", "Machine Learning", "Python"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+    image: "https://customer-assets.emergentagent.com/job_tarun-design/artifacts/u44x961a_image.png"
   },
   {
     id: 2,
@@ -56,6 +56,6 @@ export const experiences = [
 export const contact = {
   email: "taruntarun62689@gmail.com",
   linkedin: "https://www.linkedin.com/in/tarun-a-s",
-  github: "https://github.com/tarunas",
+  github: "https://github.com/Tarun62689",
   location: "Bengaluru, India"
 };
