@@ -27,11 +27,10 @@ const ImageCarousel = ({ images }) => {
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-all duration-1000 ${
-            index === currentIndex
+          className={`absolute inset-0 transition-all duration-1000 ${index === currentIndex
               ? 'opacity-100 scale-100 z-10'
               : 'opacity-0 scale-95 z-0'
-          }`}
+            }`}
         >
           <img
             src={img}
@@ -40,7 +39,7 @@ const ImageCarousel = ({ images }) => {
           />
         </div>
       ))}
-      
+
       {/* Navigation Arrows */}
       <button
         onClick={goToPrev}
@@ -61,11 +60,10 @@ const ImageCarousel = ({ images }) => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex
                 ? 'bg-[#FAFAF9] w-8'
                 : 'bg-[#FAFAF9]/50 hover:bg-[#FAFAF9]/75'
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -122,7 +120,7 @@ const Portfolio = () => {
       <nav className="fixed top-0 left-0 right-0 bg-[#FAFAF9]/95 backdrop-blur-sm z-50 border-b border-[#E5E5E5] animate-slideDown">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
           <h1 className="text-2xl font-serif font-bold text-[#1A1A1A] tracking-tight">TARUN A S</h1>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <button onClick={() => scrollToSection('home')} className="text-[#2D2D2D] hover:text-[#1A1A1A] transition-colors text-sm font-medium tracking-wide">HOME</button>
@@ -156,18 +154,18 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fadeInLeft">
               <div>
-                <p className="text-[#A3A3A3] text-sm tracking-[0.2em] uppercase mb-4 font-sans animate-fadeIn" style={{animationDelay: '0.2s'}}>Web Developer & Data Science Student</p>
-                <h1 className="font-serif text-6xl lg:text-7xl xl:text-8xl font-bold text-[#1A1A1A] leading-[0.95] mb-6 animate-fadeInUp" style={{animationDelay: '0.4s'}}>
+                <p className="text-[#A3A3A3] text-sm tracking-[0.2em] uppercase mb-4 font-sans animate-fadeIn" style={{ animationDelay: '0.2s' }}>Web Developer & Data Science Student</p>
+                <h1 className="font-serif text-6xl lg:text-7xl xl:text-8xl font-bold text-[#1A1A1A] leading-[0.95] mb-6 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
                   HEY, I'M<br />TARUN A S
                 </h1>
-                <p className="text-[#2D2D2D] text-lg lg:text-xl leading-relaxed font-sans max-w-xl animate-fadeIn" style={{animationDelay: '0.6s'}}>
+                <p className="text-[#2D2D2D] text-lg lg:text-xl leading-relaxed font-sans max-w-xl animate-fadeIn" style={{ animationDelay: '0.6s' }}>
                   Final-year BE Data Science student, Web Developer & UI-focused problem solver
                 </p>
               </div>
-              <button 
+              <button
                 onClick={() => scrollToSection('projects')}
                 className="group inline-flex items-center gap-2 bg-[#1A1A1A] text-[#FAFAF9] px-8 py-4 hover:bg-[#2D2D2D] hover:scale-105 hover:shadow-lg transition-all duration-300 font-sans text-sm tracking-wide animate-fadeIn"
-                style={{animationDelay: '0.8s'}}
+                style={{ animationDelay: '0.8s' }}
               >
                 VIEW MY WORK
                 <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-300" />
@@ -175,9 +173,9 @@ const Portfolio = () => {
             </div>
             <div className="relative flex justify-center md:justify-end animate-fadeInRight">
               <div className="relative rounded-3xl overflow-hidden w-80 h-80 lg:w-96 lg:h-96 bg-[#E5E5E5] hover:scale-105 transition-transform duration-500 hover:shadow-2xl">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_tarun-design/artifacts/62scao4b_protrait.jpg" 
-                  alt="Tarun A S" 
+                <img
+                  src="https://customer-assets.emergentagent.com/job_tarun-design/artifacts/62scao4b_protrait.jpg"
+                  alt="Tarun A S"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -194,10 +192,10 @@ const Portfolio = () => {
           <div className="space-y-6">
             <h2 className="font-serif text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-8 hover:text-[#2D2D2D] transition-colors duration-300">About</h2>
             <p className="text-[#2D2D2D] text-lg lg:text-xl leading-relaxed font-sans hover:translate-x-2 transition-transform duration-300">
-              As a Data Science undergraduate and web developer, I build real-world, user-focused applications using modern web technologies and data-driven approaches.
+              I’m a final-year Data Science undergraduate and web developer, focused on building real-world, user-centric applications using modern web technologies and data-driven approaches.
             </p>
             <p className="text-[#2D2D2D] text-lg lg:text-xl leading-relaxed font-sans hover:translate-x-2 transition-transform duration-300">
-              I enjoy transforming ideas into functional, scalable products and have experience working on full-stack projects, analytics dashboards, and UI/UX-driven applications.
+              I enjoy transforming ideas into scalable, functional products and have hands-on experience developing full-stack applications, analytics dashboards, and intuitive UI/UX-driven interfaces. I’m also keenly interested in data analytics, where I enjoy extracting insights from data to support better decision-making.
             </p>
           </div>
         </div>
@@ -206,58 +204,105 @@ const Portfolio = () => {
       {/* Projects Section */}
       <section id="projects" data-animate className="py-20 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className={`mb-16 transition-all duration-1000 ${visibleSections.has('projects') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="font-serif text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-4 hover:text-[#2D2D2D] transition-colors duration-300">Featured Projects</h2>
-            <p className="text-[#A3A3A3] text-lg font-sans">A selection of my recent work</p>
+          <div
+            className={`mb-16 transition-all duration-1000 ${visibleSections.has("projects")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+              }`}
+          >
+            <h2 className="font-serif text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-4 hover:text-[#2D2D2D] transition-colors duration-300">
+              Featured Projects
+            </h2>
+            <p className="text-[#A3A3A3] text-lg font-sans">
+              A selection of my recent work
+            </p>
           </div>
 
           <div className="space-y-16">
-            {projects.map((project, index) => (
-              <div 
-                key={project.id} 
-                className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                  index % 2 === 1 ? 'md:grid-flow-dense' : ''
-                } transition-all duration-1000 ${visibleSections.has('projects') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{transitionDelay: `${index * 0.2}s`}}
-              >
-                <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
-                  <div className="rounded-3xl overflow-hidden bg-[#E5E5E5] aspect-video hover:scale-105 hover:shadow-2xl transition-all duration-500 group">
-                    {project.images ? (
-                      <ImageCarousel images={project.images} />
-                    ) : (
-                      <img 
-                        src={project.image} 
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+            {projects.map((project, index) => {
+              const hasImages = project.images?.length > 0;
+
+              return (
+                <div
+                  key={project.id}
+                  className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 === 1 ? "md:grid-flow-dense" : ""
+                    } transition-all duration-1000 ${visibleSections.has("projects")
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
+                    }`}
+                  style={{ transitionDelay: `${index * 0.2}s` }}
+                >
+                  {/* Image */}
+                  <div className={index % 2 === 1 ? "md:col-start-2" : ""}>
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div className="rounded-3xl overflow-hidden bg-[#E5E5E5] aspect-video hover:shadow-2xl transition-all duration-500 group cursor-pointer">
+                        {hasImages ? (
+                          <ImageCarousel images={project.images} />
+                        ) : (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-contain bg-[#E5E5E5] transition-transform duration-700"
+                          />
+                        )}
+                      </div>
+
+                    </a>
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className={`space-y-6 ${index % 2 === 1
+                        ? "md:col-start-1 md:row-start-1"
+                        : ""
+                      }`}
+                  >
+                    <div>
+                      <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 leading-tight hover:text-[#2D2D2D] transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-[#2D2D2D] text-base lg:text-lg leading-relaxed font-sans">
+                        {project.description}
+                      </p>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-4 py-2 bg-[#E5E5E5] text-[#2D2D2D] text-xs font-sans tracking-wide hover:bg-[#2D2D2D] hover:text-[#FAFAF9] hover:scale-110 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Live Button */}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-4 px-6 py-3 rounded-full bg-[#1A1A1A] text-[#FAFAF9] text-sm font-sans tracking-wide
+                             hover:bg-[#2D2D2D] hover:scale-105 transition-all duration-300"
+                      >
+                        View Live Project →
+                      </a>
                     )}
                   </div>
                 </div>
-                <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
-                  <div>
-                    <h3 className="font-serif text-3xl lg:text-4xl font-bold text-[#1A1A1A] mb-4 leading-tight hover:text-[#2D2D2D] transition-colors duration-300">
-                      {project.title}
-                    </h3>
-                    <p className="text-[#2D2D2D] text-base lg:text-lg leading-relaxed font-sans">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, idx) => (
-                      <span 
-                        key={idx}
-                        className="px-4 py-2 bg-[#E5E5E5] text-[#2D2D2D] text-xs font-sans tracking-wide hover:bg-[#2D2D2D] hover:text-[#FAFAF9] hover:scale-110 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+
 
       {/* Skills Section */}
       <section id="skills" data-animate className="py-20 px-6 lg:px-12 bg-white">
@@ -283,7 +328,7 @@ const Portfolio = () => {
 
             <div className="space-y-4 hover:translate-y-[-8px] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="text-[#1A1A1A] animate-pulse" size={28} style={{animationDelay: '0.2s'}} />
+                <Briefcase className="text-[#1A1A1A] animate-pulse" size={28} style={{ animationDelay: '0.2s' }} />
                 <h3 className="font-serif text-2xl font-bold text-[#1A1A1A]">Frameworks</h3>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -297,7 +342,7 @@ const Portfolio = () => {
 
             <div className="space-y-4 hover:translate-y-[-8px] transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
-                <Database className="text-[#1A1A1A] animate-pulse" size={28} style={{animationDelay: '0.4s'}} />
+                <Database className="text-[#1A1A1A] animate-pulse" size={28} style={{ animationDelay: '0.4s' }} />
                 <h3 className="font-serif text-2xl font-bold text-[#1A1A1A]">Databases</h3>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -374,7 +419,7 @@ const Portfolio = () => {
           <h2 className="font-serif text-5xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight hover:scale-105 transition-transform duration-500">
             LET'S WORK<br />TOGETHER
           </h2>
-          <p className="text-[#A3A3A3] text-lg lg:text-xl mb-12 max-w-2xl mx-auto font-sans animate-fadeIn" style={{animationDelay: '0.3s'}}>
+          <p className="text-[#A3A3A3] text-lg lg:text-xl mb-12 max-w-2xl mx-auto font-sans animate-fadeIn" style={{ animationDelay: '0.3s' }}>
             I'm open to internships, collaborations, and real-world project opportunities.
           </p>
 
@@ -393,7 +438,7 @@ const Portfolio = () => {
                 <span className="text-lg font-sans">GitHub</span>
               </a>
             </div>
-            <p className="text-[#A3A3A3] text-base font-sans animate-fadeIn" style={{animationDelay: '0.6s'}}>{contact.location}</p>
+            <p className="text-[#A3A3A3] text-base font-sans animate-fadeIn" style={{ animationDelay: '0.6s' }}>{contact.location}</p>
           </div>
         </div>
       </section>
@@ -411,7 +456,7 @@ const Portfolio = () => {
             </a>
           </div>
           {showScrollTop && (
-            <button 
+            <button
               onClick={scrollToTop}
               className="flex items-center gap-2 text-[#A3A3A3] hover:text-[#FAFAF9] hover:scale-110 transition-all duration-300 text-sm font-sans animate-bounce"
             >

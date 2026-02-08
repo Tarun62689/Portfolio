@@ -1,18 +1,23 @@
 export const projects = [
   {
-    id: 1,
-    title: "Path2Placement – Placement Prediction & Insights Platform",
-    description: "A data-driven platform that provides placement predictions, analytics dashboards, and insights for students using machine learning and modern web technologies.",
-    tags: ["React", "Node.js", "Express", "Supabase", "Machine Learning", "Python"],
-    image: "https://customer-assets.emergentagent.com/job_tarun-design/artifacts/u44x961a_image.png"
-  },
-  {
-    id: 2,
-    title: "GDrive Clone – Cloud File Management System",
-    description: "A secure cloud-based file management system with authentication, folder hierarchy, search, and soft delete functionality.",
-    tags: ["React", "Node.js", "Supabase", "File Storage APIs"],
-    image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?w=800&q=80"
-  },
+  id: 1,
+  title: "Path2Placement – Guiding Students from Education to Employment",
+  description:
+    "A data-driven platform that provides placement predictions, analytics dashboards, and insights for students using machine learning and modern web technologies.",
+  tags: ["React", "Node.js", "Express", "Supabase", "Machine Learning", "Python"],
+  image: "https://customer-assets.emergentagent.com/job_tarun-design/artifacts/u44x961a_image.png",
+  liveUrl: "https://path2placement.netlify.app/"
+},
+{
+  id: 2,
+  title: "GDrive Clone – Cloud File Management System",
+  description:
+    "A secure cloud-based file management system with authentication, folder hierarchy, search, and soft delete functionality.",
+  tags: ["React", "Node.js", "Supabase", "File Storage APIs"],
+  image: "https://drive.google.com/thumbnail?id=1Rhl8mfwPpldJdXRmwEeWg7Dck3G1Zvyr&sz=w1200",
+  liveUrl: "https://gdrive-frontend.onrender.com"
+}
+,
   {
     id: 3,
     title: "Movie Recommendation System",
@@ -28,9 +33,9 @@ export const projects = [
 export const skills = {
   programming: ["Python", "JavaScript", "HTML", "CSS", "SQL"],
   frameworks: ["React.js", "Node.js", "Express.js"],
-  databases: ["Supabase", "MongoDB"],
+  databases: ["Supabase", "MongoDB Atlas"],
   tools: ["Git", "GitHub", "Postman", "Figma", "Power BI", "Tableau"],
-  concepts: ["REST APIs", "UI/UX Design", "Full-Stack Development"]
+  concepts: ["REST APIs", "UI/UX Design"]
 };
 
 export const experiences = [
