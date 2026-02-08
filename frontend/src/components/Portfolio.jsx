@@ -83,9 +83,9 @@ const Portfolio = () => {
               </button>
             </div>
             <div className="relative flex justify-center md:justify-end">
-              <div className="relative rounded-3xl overflow-hidden w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative rounded-3xl overflow-hidden w-80 h-80 lg:w-96 lg:h-96 bg-[#E5E5E5]">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_tarun-design/artifacts/8467cmu2_protrait-removebg-preview.png" 
+                  src="https://customer-assets.emergentagent.com/job_tarun-design/artifacts/62scao4b_protrait.jpg" 
                   alt="Tarun A S" 
                   className="w-full h-full object-cover"
                 />
