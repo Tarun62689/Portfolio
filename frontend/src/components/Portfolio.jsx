@@ -1,6 +1,77 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ArrowRight, Code2, Database, Briefcase, Mail, Linkedin, Github, ChevronUp } from 'lucide-react';
+import { Menu, X, ArrowRight, Code2, Database, Briefcase, Mail, Linkedin, Github, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects, skills, experiences, contact } from '../data/mock';
+
+// Image Carousel Component
+const ImageCarousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Auto-slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className="relative w-full h-full group">
+      {images.map((img, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-all duration-1000 ${
+            index === currentIndex
+              ? 'opacity-100 scale-100 z-10'
+              : 'opacity-0 scale-95 z-0'
+          }`}
+        >
+          <img
+            src={img}
+            alt={`Slide ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+      
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-[#1A1A1A]/80 text-[#FAFAF9] p-3 rounded-full opacity-0 group-hover:opacity-100 hover:bg-[#1A1A1A] hover:scale-110 transition-all duration-300"
+      >
+        <ChevronLeft size={24} />
+      </button>
+      <button
+        onClick={goToNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-[#1A1A1A]/80 text-[#FAFAF9] p-3 rounded-full opacity-0 group-hover:opacity-100 hover:bg-[#1A1A1A] hover:scale-110 transition-all duration-300"
+      >
+        <ChevronRight size={24} />
+      </button>
+
+      {/* Dots Indicator */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? 'bg-[#FAFAF9] w-8'
+                : 'bg-[#FAFAF9]/50 hover:bg-[#FAFAF9]/75'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -151,11 +222,15 @@ const Portfolio = () => {
               >
                 <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
                   <div className="rounded-3xl overflow-hidden bg-[#E5E5E5] aspect-video hover:scale-105 hover:shadow-2xl transition-all duration-500 group">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
+                    {project.images ? (
+                      <ImageCarousel images={project.images} />
+                    ) : (
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                    )}
                   </div>
                 </div>
                 <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>

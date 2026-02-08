@@ -18,7 +18,10 @@ export const projects = [
     title: "Movie Recommendation System",
     description: "A content-based movie recommendation system built using Flask and ML techniques, integrated with TMDB API.",
     tags: ["Python", "Flask", "Scikit-learn", "Pandas"],
-    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80"
+    images: [
+      "https://customer-assets.emergentagent.com/job_tarun-design/artifacts/4m31crtv_image.png",
+      "https://customer-assets.emergentagent.com/job_tarun-design/artifacts/c1ox0w33_image.png"
+    ]
   }
 ];
 
